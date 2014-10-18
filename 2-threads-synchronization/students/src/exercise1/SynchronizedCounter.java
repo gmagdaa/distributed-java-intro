@@ -4,13 +4,14 @@ import common.Counter;
 
 public class SynchronizedCounter implements Counter {
 
+	long liczba;
     @Override
-    public void increment() {
-
+    public synchronized void increment() {
+    	liczba = liczba +1;
     }
 
     @Override
     public long getValue() {
-        return 0;
+        return liczba;
     }
 }

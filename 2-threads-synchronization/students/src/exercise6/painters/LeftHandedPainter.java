@@ -17,7 +17,7 @@ public class LeftHandedPainter extends Painter {
                 Thread.sleep(100);
 
                 synchronized (brush) {
-                    String takenBrush = this.brush.takeBrush();
+                     String takenBrush = this.brush.takeBrush();
                     Thread.sleep(100);
 
                     System.out.printf("Left hand painter painting with %s and %s\n", takenPaint, takenBrush);

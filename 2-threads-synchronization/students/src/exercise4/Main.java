@@ -6,13 +6,14 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+import exercise1.SynchronizedCounter;
 import static common.CountingRunner.numberOfIterations;
 import static common.CountingRunner.numberOfThreads;
 
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
-        Counter counter = null; // TODO: Provide counter implementation
+        Counter counter = new SynchronizedCounter(); // TODO: Provide counter implementation
         execute(counter);
     }
 
