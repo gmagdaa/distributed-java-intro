@@ -15,9 +15,12 @@ public class Painter implements Runnable {
 
     @Override
     public void run() {
+
         try {
+
             paints.takePaint();
             Thread.sleep(100);
+
             brushes.takeBrush();
             Thread.sleep(100);
 
@@ -29,5 +32,6 @@ public class Painter implements Runnable {
             paints.returnPaint();
             brushes.returnBrush();
         }
+        
     }
 }
